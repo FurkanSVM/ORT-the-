@@ -2,7 +2,6 @@ import cv2 as cv
 import numpy as np 
 vid=cv.VideoCapture("reddetection.mp4")
 while True:
-    blank = np.zeros((500,500,3), dtype="uint8")
     isTrue, frame=vid.read()
     hsv_frame = cv.cvtColor(frame,cv.COLOR_BGR2HSV)
     lower_red = np.array([0, 80, 80])
